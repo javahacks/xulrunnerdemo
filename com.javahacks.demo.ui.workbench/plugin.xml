@@ -2,24 +2,51 @@
 <plugin>
 
    <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.javahacks.demo.ui.workbench.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            name="com.javahacks.demo.ui.workbench"
-            application="org.eclipse.e4.ui.workbench.swt.E4Application">
-         <property
-               name="lifeCycleURI"
-               value="bundleclass://com.javahacks.demo.ui.workbench/com.javahacks.demo.ui.workbench.E4LifeCycle">
-         </property>
-         <property
-               name="applicationCSS"
-               value="platform:/plugin/com.javahacks.demo.ui.workbench/css/default.css">
-         </property>
+            application="com.javahacks.demo.ui.workbench.application"
+            name="product">
          <property
                name="appName"
-               value="com.javahacks.demo.ui.workbench">
+               value="product">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
+   </extension>
+   <extension
+         point="org.eclipse.equinox.http.registry.resources">
+      <resource
+            alias="/"
+            base-name="/web">
+      </resource>
    </extension>
 
 </plugin>
