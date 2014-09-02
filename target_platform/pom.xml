@@ -8,7 +8,7 @@
 
 	<repositories>
 
-		
+
 		<repository>
 			<id>knopflerfish</id>
 			<name>Knopflerfish</name>
@@ -33,6 +33,19 @@
 			<artifactId>desktop-API</artifactId>
 			<version>5.0.1</version>
 		</dependency>
+
+
+		<dependency>
+			<groupId>org.eclipse.jetty.osgi</groupId>
+			<artifactId>jetty-osgi-boot</artifactId>
+			<version>9.2.2.v20140723</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.websocket</groupId>
+			<artifactId>websocket-servlet</artifactId>
+			<version>9.2.2.v20140723</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -88,7 +101,7 @@
 			</plugin>
 
 		</plugins>
-		
+
 	</build>
 
 
