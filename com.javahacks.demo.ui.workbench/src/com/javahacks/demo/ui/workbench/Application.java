@@ -128,7 +128,10 @@ public class Application implements IApplication {
 				ImageData[] load = new ImageLoader().load(file);			
 				StreamingServlet.setImage(new Image(display, load[0]));
 			}
+			
 			catch(IllegalArgumentException ex){
+				
+				//ignore
 			}
 		}
 		
