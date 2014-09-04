@@ -6,6 +6,10 @@
 	<artifactId>target_platform</artifactId>
 	<version>1.0</version>
 
+	<properties>
+		<JETTY_VERSION>9.2.2.v20140723</JETTY_VERSION>
+	</properties>
+
 	<repositories>
 
 
@@ -23,6 +27,7 @@
 
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.knopflerfish.bundle</groupId>
 			<artifactId>desktop</artifactId>
@@ -38,14 +43,80 @@
 		<dependency>
 			<groupId>org.eclipse.jetty.osgi</groupId>
 			<artifactId>jetty-osgi-boot</artifactId>
-			<version>9.2.2.v20140723</version>
+			<version>${JETTY_VERSION}</version>
 		</dependency>
+		
+		
 		<dependency>
 			<groupId>org.eclipse.jetty.websocket</groupId>
 			<artifactId>websocket-servlet</artifactId>
-			<version>9.2.2.v20140723</version>
+			<version>${JETTY_VERSION}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.websocket</groupId>
+			<artifactId>websocket-server</artifactId>
+			<version>${JETTY_VERSION}</version>
 		</dependency>
 		
+		
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-server</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-client</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-client-compiled</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-push</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-themes</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>com.vaadin.external.google</groupId>
+			<artifactId>android-json</artifactId>
+			<version>0.0.20131108.vaadin1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 	<build>
@@ -103,6 +174,7 @@
 		</plugins>
 
 	</build>
+
 
 
 </project>
