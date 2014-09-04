@@ -23,7 +23,7 @@ import org.mozilla.xulrunner.XULRunner;
 
 public class Application implements IApplication {
 
-	private static final String SERVER_ID = "SIRIUS";
+	
 	private static final int JETTY_PORT = 8080;
 
 	private static final String DATA_SPLASH_SHELL = "org.eclipse.ui.workbench.splashShell"; //$NON-NLS-1$
