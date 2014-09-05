@@ -127,7 +127,7 @@
    <features>
       <feature id="com.javahacks.demo.feature" version="1.0.0.qualifier"/>
       <feature id="org.mozilla.xulrunner.feature" version="24.0.0"/>
-      <feature id="org.eclipse.jetty.feature" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.jetty.feature" version="9.2.2"/>
    </features>
 
    <configurations>
