@@ -79,7 +79,8 @@ public class Application implements IApplication {
 			
 		};
 		
-		getSplashShell(display).dispose();
+		getSplashShell(display);
+		unsetSplashShell(display);
 
 		shell.open();
 		while (!shell.isDisposed()) {
