@@ -29,6 +29,7 @@ public class Application implements IApplication {
 	private static final String DATA_SPLASH_SHELL = "org.eclipse.ui.workbench.splashShell"; //$NON-NLS-1$
 	private static final String PROP_SPLASH_HANDLE = "org.eclipse.equinox.launcher.splash.handle"; //$NON-NLS-1$
 
+	
 	@Override
 	public Object start(IApplicationContext context) throws Exception {
 
