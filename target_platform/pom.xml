@@ -7,46 +7,61 @@
 	<version>1.0</version>
 
 	<properties>
-		<JETTY_VERSION>9.2.2.v20140723</JETTY_VERSION>
+		<JETTY_VERSION>9.2.3.v20140905</JETTY_VERSION>
+		<vaadin.version>7.3.0</vaadin.version>
+		<vaadin.plugin.version>7.3.0</vaadin.plugin.version>
 	</properties>
 
+
 	<repositories>
-
-
 		<repository>
-			<id>knopflerfish</id>
-			<name>Knopflerfish</name>
-			<layout>default</layout>
-			<url>http://www.knopflerfish.org/maven2/</url>
-			<snapshots>
+			<id>vaadin-addons</id>
+			<url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+		<repository>
+			<id>vaadin-snapshots</id>
+			<url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+			<releases>
 				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 
 	<dependencies>
 
 		<dependency>
-			<groupId>org.knopflerfish.bundle</groupId>
-			<artifactId>desktop</artifactId>
-			<version>5.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.knopflerfish.bundle</groupId>
-			<artifactId>desktop-API</artifactId>
-			<version>5.0.1</version>
+			<groupId>org.zeromq</groupId>
+			<artifactId>jeromq</artifactId>
+			<version>0.3.4</version>
 		</dependency>
 
+		<!-- for the latest SNAPSHOT -->
+		<dependency>
+			<groupId>org.zeromq</groupId>
+			<artifactId>jeromq</artifactId>
+			<version>0.3.5-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.eclipse.jetty.osgi</groupId>
 			<artifactId>jetty-osgi-boot</artifactId>
 			<version>${JETTY_VERSION}</version>
 		</dependency>
-		
-		
+
 		<dependency>
 			<groupId>org.eclipse.jetty.websocket</groupId>
 			<artifactId>websocket-servlet</artifactId>
@@ -57,32 +72,30 @@
 			<artifactId>websocket-server</artifactId>
 			<version>${JETTY_VERSION}</version>
 		</dependency>
-		
-		
+
+		<dependency>
+			<groupId>com.vaadin.addon</groupId>
+			<artifactId>vaadin-charts</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-server</artifactId>
-			<version>7.3.0</version>
+			<version>${vaadin.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client</artifactId>
-			<version>7.3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client-compiled</artifactId>
-			<version>7.3.0</version>
-		</dependency>
+
+
+
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-push</artifactId>
-			<version>7.3.0</version>
+			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-themes</artifactId>
-			<version>7.3.0</version>
+			<version>${vaadin.version}</version>
 		</dependency>
 
 
@@ -133,7 +146,7 @@
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>maven_dependencies</outputDirectory>
+							<outputDirectory>maven_libs</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
@@ -141,6 +154,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 
 
 			<plugin>
@@ -171,7 +185,10 @@
 
 			</plugin>
 
+
 		</plugins>
+
+
 
 	</build>
 
