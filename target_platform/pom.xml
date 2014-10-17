@@ -28,41 +28,35 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-<<<<<<< HEAD
-		<repository>
-			<id>sonatype-nexus-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-=======
->>>>>>> refs/remotes/origin/master
+		 <repository>
+        <id>sonatype-nexus-snapshots</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        <releases>
+          <enabled>false</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+       </repository>
 	</repositories>
 
 
 	<dependencies>
 
-		<dependency>
-<<<<<<< HEAD
-			<groupId>org.zeromq</groupId>
-			<artifactId>jeromq</artifactId>
-			<version>0.3.4</version>
-		</dependency>
+	<dependency>
+      <groupId>org.zeromq</groupId>
+      <artifactId>jeromq</artifactId>
+      <version>0.3.4</version>
+    </dependency>
 
-		<!-- for the latest SNAPSHOT -->
-		<dependency>
-			<groupId>org.zeromq</groupId>
-			<artifactId>jeromq</artifactId>
-			<version>0.3.5-SNAPSHOT</version>
-		</dependency>
+    <!-- for the latest SNAPSHOT -->
+    <dependency>
+      <groupId>org.zeromq</groupId>
+      <artifactId>jeromq</artifactId>
+      <version>0.3.5-SNAPSHOT</version>
+    </dependency>
 
 		<dependency>
-=======
->>>>>>> refs/remotes/origin/master
 			<groupId>org.eclipse.jetty.osgi</groupId>
 			<artifactId>jetty-osgi-boot</artifactId>
 			<version>${JETTY_VERSION}</version>
@@ -90,15 +84,9 @@
 			<artifactId>vaadin-server</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
-<<<<<<< HEAD
-
-
-
-=======
 		
 		
 		
->>>>>>> refs/remotes/origin/master
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-push</artifactId>
